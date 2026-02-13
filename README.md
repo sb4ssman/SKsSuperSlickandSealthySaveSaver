@@ -1,4 +1,4 @@
-# SK's Super Stealthy Subnautica Save Saver (SSSSSS)
+# SK's Super Slick and Stealthy video game Save Saver (SSSSSS)
 
 ## Overview
 
