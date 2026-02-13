@@ -6,6 +6,9 @@ SubnauticaBelowZero-SavedGames-Backup/
 scraps/
 logs/
 
+# Claude notes tool output (regenerated on demand)
+_claude_notes/_claude_outputs/
+
 # Python
 __pycache__/
 *.pyc

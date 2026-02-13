@@ -1,0 +1,150 @@
+{
+    "subnautica": {
+        "name": "Subnautica",
+        "process": "Subnautica.exe",
+        "save_paths": [
+            "{install_dir}/SNAppData/SavedGames",
+            "{localappdata_low}/Unknown Worlds/Subnautica/Subnautica/SavedGames"
+        ],
+        "save_pattern": "slot*",
+        "steam_id": 264710,
+        "notes": "Steam version uses install_dir path; Epic uses LocalAppDataLow path"
+    },
+    "subnautica_below_zero": {
+        "name": "Subnautica: Below Zero",
+        "process": "SubnauticaZero.exe",
+        "save_paths": [
+            "{install_dir}/SNAppData/SavedGames",
+            "{localappdata_low}/Unknown Worlds/Subnautica Below Zero/SubnauticaZero/SavedGames"
+        ],
+        "save_pattern": "slot*",
+        "steam_id": 848450
+    },
+    "elden_ring": {
+        "name": "Elden Ring",
+        "process": "eldenring.exe",
+        "save_paths": [
+            "{appdata}/EldenRing"
+        ],
+        "save_pattern": "*",
+        "steam_id": 1245620,
+        "notes": "Single save file (ER0000.sl2) per Steam user ID subfolder"
+    },
+    "dark_souls_3": {
+        "name": "Dark Souls III",
+        "process": "DarkSoulsIII.exe",
+        "save_paths": [
+            "{appdata}/DarkSoulsIII"
+        ],
+        "save_pattern": "*",
+        "steam_id": 374320,
+        "notes": "Save file (DS30000.sl2) in Steam user ID subfolder"
+    },
+    "valheim": {
+        "name": "Valheim",
+        "process": "valheim.exe",
+        "save_paths": [
+            "{localappdata_low}/IronGate/Valheim"
+        ],
+        "save_pattern": "*",
+        "steam_id": 892970,
+        "notes": "Characters in characters/, worlds in worlds/ and worlds_local/"
+    },
+    "stardew_valley": {
+        "name": "Stardew Valley",
+        "process": "Stardew Valley.exe",
+        "save_paths": [
+            "{appdata}/StardewValley/Saves"
+        ],
+        "save_pattern": "*",
+        "steam_id": 413150,
+        "notes": "Each save is a folder named after the character and farm"
+    },
+    "satisfactory": {
+        "name": "Satisfactory",
+        "process": "FactoryGame-Win64-Shipping.exe",
+        "save_paths": [
+            "{localappdata}/FactoryGame/Saved/SaveGames"
+        ],
+        "save_pattern": "*",
+        "steam_id": 526870,
+        "notes": "Saves organized by Steam/Epic user ID subfolders"
+    },
+    "cyberpunk_2077": {
+        "name": "Cyberpunk 2077",
+        "process": "Cyberpunk2077.exe",
+        "save_paths": [
+            "{localappdata}/CD Projekt Red/Cyberpunk 2077/Saved Games",
+            "{localappdata}/REDEngine/Cyberpunk2077/Saved Games"
+        ],
+        "save_pattern": "*",
+        "steam_id": 1091500
+    },
+    "no_mans_sky": {
+        "name": "No Man's Sky",
+        "process": "NMS.exe",
+        "save_paths": [
+            "{appdata}/HelloGames/NMS"
+        ],
+        "save_pattern": "*",
+        "steam_id": 275850,
+        "notes": "Saves in st_<steamid>/ subfolder with multiple save*.hg files"
+    },
+    "the_forest": {
+        "name": "The Forest",
+        "process": "TheForest.exe",
+        "save_paths": [
+            "{localappdata_low}/SKS/TheForest/Saves"
+        ],
+        "save_pattern": "*",
+        "steam_id": 242760
+    },
+    "sons_of_the_forest": {
+        "name": "Sons of the Forest",
+        "process": "SonsOfTheForest.exe",
+        "save_paths": [
+            "{localappdata_low}/Endnight/SonsOfTheForest/Saves"
+        ],
+        "save_pattern": "*",
+        "steam_id": 1326470
+    },
+    "baldurs_gate_3": {
+        "name": "Baldur's Gate 3",
+        "process": "bg3.exe",
+        "save_paths": [
+            "{localappdata}/Larian Studios/Baldur's Gate 3/PlayerProfiles/Public/Savegames"
+        ],
+        "save_pattern": "*",
+        "steam_id": 1086940,
+        "notes": "Save structure: Story/ subfolder with individual save directories"
+    },
+    "terraria": {
+        "name": "Terraria",
+        "process": "Terraria.exe",
+        "save_paths": [
+            "{documents}/My Games/Terraria"
+        ],
+        "save_pattern": "*",
+        "steam_id": 105600,
+        "notes": "Players in Players/, Worlds in Worlds/"
+    },
+    "palworld": {
+        "name": "Palworld",
+        "process": "Palworld-Win64-Shipping.exe",
+        "save_paths": [
+            "{localappdata}/Pal/Saved/SaveGames"
+        ],
+        "save_pattern": "*",
+        "steam_id": 1623730,
+        "notes": "Early access — save format may change"
+    },
+    "minecraft_java": {
+        "name": "Minecraft (Java Edition)",
+        "process": "javaw.exe",
+        "save_paths": [
+            "{appdata}/.minecraft/saves"
+        ],
+        "save_pattern": "*",
+        "notes": "Each world is a folder. Process detection unreliable (generic javaw.exe)"
+    }
+}
