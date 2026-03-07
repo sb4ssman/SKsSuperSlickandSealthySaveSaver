@@ -2,38 +2,27 @@
 
 ## Current Status
 
-**Initial scaffold complete.** All modules written. The new `sssss/` package has been built from the ground up. Original files preserved in `archive/`. Next step: test, debug, iterate with user.
+**Project reorganized and setup system enhanced.** Application code moved to `App/` folder, assets to `Assets/`. Setup script creates launcher bat and handles startup integration. Currently fixing setup script issues.
 
 ## Project Structure
 
 ```
-sssss/                    # Main package
-    __init__.py           # VERSION = "2.0.0"
-    __main__.py           # python -m sssss (entry point)
-    SuperSaveSaver.py     # App lifecycle, wires all subsystems together
-    config.py             # AppSettings + GameConfig dataclasses, JSON persistence
-    registry.py           # GameDefinition dataclass, loads games/manifest.json
-    detector.py           # Steam library parsing, save path probing, process detection
-    watcher.py            # WatcherManager + SaveEventHandler (per-game watchdog observers)
-    backup.py             # Timestamped snapshots, rotation/pruning, ZIP compression
-    restore.py            # Restore from snapshots with safety backup
-    ui/
-        tray.py           # TrayIcon with double-click support, status indicator
-        status_window.py  # Tabbed game settings, backup lists, log viewer
-        tooltips.py       # ToolTip widget (ported from original)
-    games/
-        manifest.json     # 15 game definitions (Subnautica, Elden Ring, Valheim, etc.)
+App/                      # Application code
+    core/                 # Core functionality (backup, watcher, detector, etc.)
+    ui/                   # UI components (tray, status window, tooltips)
+    SuperSaveSaver.py     # Main entry point
+Assets/                   # Assets (icons, etc.)
+    app_icon.ico
+build_scripts/            # Build/setup scripts
+    setup.py
 archive/                  # Original v1.0 files preserved
 ```
 
 ## Active Tasks
 
-- [ ] Test the app end-to-end (python -m sssss)
-- [ ] Fix any import/runtime issues from the initial scaffold
-- [ ] Update requirements.txt to actual dependencies only
-- [ ] Update autoSSSSS.bat to use %~dp0 and new package structure
-- [ ] Update README.md for new project name and structure
-- [ ] Consider: "Add Game" UI flow for games not in manifest
+- [ ] Test the app end-to-end
+- [ ] Update README.md for new project structure
+- [ ] Monitor setup script behavior in Cursor's batch runner (input handling may need further refinement)
 
 ## Key Decisions Made
 

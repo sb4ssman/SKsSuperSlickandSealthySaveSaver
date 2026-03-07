@@ -41,3 +41,38 @@ Completed work entries. Newest at the bottom. Read the tail for most recent work
   - `__main__.py` — Entry point (`python -m sssss --silent`)
 - Created `games/manifest.json` with 15 game definitions: Subnautica, Subnautica Below Zero, Elden Ring, Dark Souls III, Valheim, Stardew Valley, Satisfactory, Cyberpunk 2077, No Man's Sky, The Forest, Sons of the Forest, Baldur's Gate 3, Terraria, Palworld, Minecraft Java
 - All original v1.0 bugs addressed in new architecture (no on_deleted propagation, no dead code, no god class, proper timestamped snapshots, thread-safe observer management)
+
+---
+
+## 2026-03-06 — Project Reorganization & Setup Improvements
+
+**What was done:**
+- Reorganized project structure for better organization:
+  - Created `App/` folder containing `core/`, `ui/`, and `SuperSaveSaver.py`
+  - Created `Assets/` folder for `app_icon.ico`
+  - Kept `build_scripts/` for setup scripts
+  - Updated all import paths and file references
+- Enhanced setup system:
+  - Created `SaveAllTheGames.bat` launcher that uses venv Python
+  - Updated startup integration to use launcher bat instead of direct Python calls
+  - Setup now automatically detects repo location and adapts paths
+  - Startup folder uses user's vanilla Windows startup folder (`APPDATA\...\Startup`)
+
+**What needs fixing:**
+- Setup script needs Python version check
+- Setup should remove old startup entry if user declines
+- Setup should print summary and exit without pause
+- Input handling issue in Cursor's batch runner (auto-responding to prompts)
+
+---
+
+## 2026-03-06 — Setup Script Improvements
+
+**What was done:**
+- Added Python version check (requires 3.6+)
+- Removed pause from setup.bat (exits cleanly after completion)
+- Added action tracking and summary output at end of setup
+- Improved input handling with `safe_input()` function that detects non-interactive terminals
+- If user declines startup installation, setup now automatically removes old startup entry
+- Setup prints formatted summary of all actions taken
+- All setup actions are tracked and displayed in summary

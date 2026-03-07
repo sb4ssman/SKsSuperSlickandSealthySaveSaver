@@ -69,7 +69,7 @@ class StatusWindow:
 
         # Window icon
         if sys.platform == "win32":
-            ico_path = self.app.app_dir / "app_icon.ico"
+            ico_path = self.app.app_dir / "Assets" / "app_icon.ico"
             if ico_path.exists():
                 self.window.iconbitmap(str(ico_path))
 

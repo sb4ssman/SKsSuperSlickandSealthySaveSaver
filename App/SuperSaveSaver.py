@@ -38,7 +38,8 @@ class SuperSaveSaver:
 
     def __init__(self, silent: bool = False):
         self.silent = silent
-        self.app_dir = Path(__file__).parent.resolve()
+        # app_dir is the repo root (parent of App folder)
+        self.app_dir = Path(__file__).parent.parent.resolve()
 
         # Set up logging
         log_file = self.app_dir / "sssss.log"
@@ -178,7 +179,7 @@ class SuperSaveSaver:
     # --- Internal ---
 
     def _set_window_icon(self) -> None:
-        ico_path = self.app_dir / "app_icon.ico"
+        ico_path = self.app_dir / "Assets" / "app_icon.ico"
         if sys.platform == "win32" and ico_path.exists():
             try:
                 self.root.iconbitmap(str(ico_path))
